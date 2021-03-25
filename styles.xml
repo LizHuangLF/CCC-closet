@@ -1,0 +1,163 @@
+<resources>
+
+    <!-- Base application theme.                              白色  不显示      全屏-->
+    <!--    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">-->
+    <!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+<!--        <item name="windowActionBar">false</item>-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!--    底栏图标-->
+    <style name="radiobutton_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_height">match_parent</item>
+<!--        <item name="android:background">@drawable/color_radiobtnb</item>-->
+        <item name="android:textColor">@drawable/selector_rbt</item>
+    </style>
+
+<!--infragment-->
+    <style name="ltv_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <!--        <item name="android:background">@color/colorSilverWhitte</item>-->
+    </style>
+    <style name="tv_style">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">175dp</item>
+        <!--        <item name="android:background">@drawable/ltv_border</item>-->
+        <item name="android:layout_margin">3dp</item>
+    </style>
+
+    <style name="BottomDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/colorJSkyBlue</item>
+    </style>
+
+    <!--    <style name="AnimBottom" >//parent="Animation.AppCompat.Dialog"-->
+    <!--        <item name="android:windowEnterAnimation">@anim/bottomdialog_in</item>-->
+    <!--        <item name="android:windowExitAnimation">@anim/bottomdialog_out</item>-->
+    <!--    </style>-->
+
+<!--recordfragment -->
+    <!--单品添加    -->
+    <style name="tbrow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+<!--        <item name="android:background">@drawable/shape_text</item>-->
+<!--        <item name="android:src">@color/colorSilverWhitte</item>-->
+    <item name="android:gravity">center_vertical</item></style>
+
+    <style name="tbtv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:gravity">center_vertical</item></style>
+
+    <style name="tbsp">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:background">@drawable/shape_text</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tbsp_colo">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:background">@drawable/shape_text</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:spinnerMode">dialog</item>
+    </style>
+
+    <style name="tbet">
+<!--        <item name="android:background">null</item>-->
+    </style>
+
+
+
+
+<!-- modelfragment-->
+
+<!--minefragment-->
+    <!--    -->
+    <style name="TableRow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">15dp</item></style>
+
+    <style name="TableIcon">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item></style>
+
+    <style name="TableText">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25sp</item></style>
+
+    <style name="TableImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@mipmap/ic_right</item></style>
+
+    <style name="View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/colorGhostWhite</item>
+        <!--        <item name="android:layout_marginTop">15dp</item>-->
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item></style>
+
+
+    <!--    个人资料-->
+    <style name="Tablerow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>  </style>
+
+    <style name="Tabletext">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center_vertical</item></style>
+
+    <style name="Tabletextt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">right</item></style>
+
+
+    <!--    登录注册-->
+    <style name="lo_re">
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/shape_text</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="BottomToTopAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottom_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/bottom_anim_exit</item>
+    </style>
+
+
+</resources>

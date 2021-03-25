@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cato">
+        <item>上装</item> <item>下装</item> <item>鞋袜</item>
+        <item>包帽</item> <item>套装</item> <item>其他</item>
+    </string-array>
+
+    <string-array name="season">
+        <item>春</item> <item>夏</item> <item>秋</item> <item>冬</item>
+        <item>春夏</item> <item>春秋</item> <item>冬春</item>
+    </string-array>
+
+    <string-array name="styler">
+        <!--   曲              小               直     -->
+        <item>甜美</item> <item>清新</item> <item>前卫</item>
+        <item>优雅</item> <item>自然</item> <item>中性</item>
+        <item>浪漫</item> <item>古典</item> <item>戏剧</item>
+        <!--   曲              大               直     -->
+    </string-array>
+
+    <string-array name="texture">
+        <item>棉</item> <item>麻</item> <item>丝</item>
+        <item>羊毛绒</item> <item>皮革</item> <item></item>
+        <item>粘纤</item> <item>涤纶</item> <item>氨纶</item>
+        <item>锦纶</item> <item>腈纶</item> <item>其他</item>
+        <item></item> <item></item> <item></item>
+        <item></item> <item></item> <item></item>
+        <item></item> <item></item> <item></item>
+        <item></item> <item></item> <item></item>
+        <item></item> <item></item> <item></item>
+    </string-array>
+
+    <string-array name="length">
+        <item>超短</item> <item>短</item> <item>中</item> <item>略长</item> <item>长</item> <item>超长</item>
+    </string-array>
+    <string-array name="loose">
+        <item>紧身</item> <item>贴身</item> <item>适中</item> <item>宽松</item> <item>廓形</item>
+    </string-array>
+
+    <string-array name="colo">
+        <item>红</item> <item>橙</item> <item>黄</item>
+        <item>绿</item> <item>青</item><item>蓝</item>
+        <item>紫</item> <item>黑</item> <item>白</item>
+        <item>灰</item> <item>棕</item>
+    </string-array>
+
+    <string-array name="bright">
+        <item>低</item> <item>中</item> <item>高</item>
+    </string-array>
+</resources>

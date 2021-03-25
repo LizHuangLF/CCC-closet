@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorJSkyBlue"
+    tools:context=".activity.RegisterActivity">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/registre">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp">
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/et_id"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shape_text"
+                    android:hint="  请输入手机号或邮箱号"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/colorMoPurple"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center">
+                <TextView android:id="@+id/tv_code"
+                    android:layout_width="100dp"
+                    android:layout_marginStart="200dp"
+                    android:text="发送验证码"
+                    android:textColor="@color/colorGhostWhite"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="200dp"
+                    android:id="@+id/et_code"
+                    android:textSize="20sp"
+                    android:background="@drawable/shape_text"
+                    android:hint="  请输入验证码"
+                    android:textColorHint="@color/colorMoPurple"
+                    android:inputType="number"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/et_pwd"
+                    android:textSize="20sp"
+                    android:background="@drawable/shape_text"
+                    android:hint="  请输入密码"
+                    android:textColorHint="@color/colorMoPurple"
+                    android:lines="1"
+                    android:singleLine="true"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/et_repwd"
+                    android:textSize="20sp"
+                    android:background="@drawable/shape_text"
+                    android:hint="  确认密码"
+                    android:textColorHint="@color/colorMoPurple"
+                    android:lines="1"
+                    android:singleLine="true"/>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_login"
+            android:text="@string/btn_register"
+            style="@style/lo_re"
+            android:drawableEnd="@mipmap/ic_right"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

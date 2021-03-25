@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ItemAddActivity">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/colorSilverWhitte">
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/item_q"/>
+<!--            android:background="@drawable/shape_pic"-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+                <TableRow style="@style/tbrow">
+                    <TextView style="@style/tbtv" android:text="类别"/>
+                    <Spinner style="@style/tbsp"
+                        android:id="@+id/sp_cato"  android:entries="@array/cato"/>
+                    <Spinner style="@style/tbsp" android:id="@+id/sp_catow" />
+                    <Spinner style="@style/tbsp" android:id="@+id/sp_catos"/>
+                </TableRow>
+
+                <TableRow style="@style/tbrow">
+                    <TextView style="@style/tbtv" android:text="@string/sp_colo"/>
+                    <Spinner style="@style/tbsp_colo" android:id="@+id/sp_color"
+                        android:entries="@array/colo"  android:prompt="@string/sp_color"/>
+                    <Spinner style="@style/tbsp_colo" android:id="@+id/sp_colorv"
+                        android:entries="@array/colo" android:prompt="@string/sp_colorv"/>
+                    <Spinner style="@style/tbsp_colo" android:id="@+id/sp_colora"
+                        android:entries="@array/colo" android:prompt="@string/sp_colora"/>
+                </TableRow>
+                <TableRow style="@style/tbrow">
+                    <TextView style="@style/tbtv" android:text="@string/sp_color"/>
+<!--                    <Spinner style="@style/tbsp_colo"-->
+<!--                        android:id="@+id/sp_tone"-->
+<!--                        android:entries="@array/colo"-->
+<!--                        android:prompt="@string/sp_colo"/>-->
+                    <TextView
+                        android:id="@+id/tv_color"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"/>
+<!--                        android:background="@color/colorXRenYellow" -->
+
+                    <Spinner style="@style/tbsp_colo" android:id="@+id/sp_bright"
+                        android:entries="@array/bright" android:prompt="@string/sp_bright"/>
+                    <Spinner style="@style/tbsp_colo" android:id="@+id/sp_satu"
+                        android:entries="@array/bright" android:prompt="@string/sp_satu"/>
+                </TableRow>
+
+                <TableRow style="@style/tbrow">
+                    <TextView style="@style/tbtv" android:text="风格"/>
+                    <Spinner style="@style/tbsp"
+                        android:id="@+id/sp_style" android:entries="@array/styler"/>
+                    <View android:layout_width="50dp"/>
+                    <TextView style="@style/tbtv" android:text="季节"/>
+                    <Spinner style="@style/tbsp"
+                        android:id="@+id/sp_season" android:entries="@array/season"/>
+                </TableRow>
+                <TableRow style="@style/tbrow">
+                    <TextView style="@style/tbtv" android:text="长度"/>
+                    <Spinner style="@style/tbsp" android:id="@+id/sp_length" android:entries="@array/length"/>
+                    <View android:layout_width="50dp"/>
+                    <TextView style="@style/tbtv" android:text="松量"/>
+                    <Spinner style="@style/tbsp" android:id="@+id/sp_loose" android:entries="@array/loose"/>
+                </TableRow>
+                <TableRow style="@style/tbrow">
+                    <TextView style="@style/tbtv" android:text="材质"/>
+                    <Spinner style="@style/tbsp" android:id="@+id/sp_texture" android:entries="@array/texture"/>
+                    <Spinner style="@style/tbsp" android:id="@+id/sp_texturev" android:entries="@array/texture"/>
+                    <Spinner style="@style/tbsp" android:id="@+id/sp_texturea" android:entries="@array/texture"/>
+
+                </TableRow>
+<!--                <TextView style="@style/tbtv" android:text="品牌"/>-->
+<!--                <EditText android:id="@+id/brand" />-->
+                <TableRow style="@style/tbrow">
+                <TextView style="@style/tbtv" android:text="价格"/>
+                <EditText android:id="@+id/price"
+                    android:layout_width="100dp" android:layout_marginStart="5dp"
+                    android:background="@drawable/shape_text"/>
+                <View android:layout_width="50dp"/>
+                    <EditText android:id="@+id/et_time"
+                        android:background="@drawable/shape_text"
+                        android:layout_width="100dp" />
+                    <TextView style="@style/tbtv" android:text="购入"/>
+            </TableRow>
+            <TableRow style="@style/tbrow">
+                <TextView style="@style/tbtv" android:text="品牌"/>
+                <EditText android:id="@+id/et_brand"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/shape_text"/>
+            </TableRow>
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:background="@color/colorXinYellow"
+                    android:layout_gravity="center"
+                    android:text="完成"/>
+                <EditText
+                 android:id="@+id/et_other"
+                 android:layout_width="match_parent"
+                 android:layout_height="200dp"
+                 android:gravity="left"
+                 android:hint="备注信息"
+                 android:background="@color/colorGhostWhite"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

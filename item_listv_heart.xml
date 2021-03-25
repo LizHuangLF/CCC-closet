@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <ImageView android:id="@+id/l_iv"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@color/colorQOXPurple"/>
+
+    <ImageView android:id="@+id/liv_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_btn_in"
+        android:layout_toEndOf="@id/l_iv"/>
+
+    <TextView android:id="@+id/ltv_name"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/tv_name"
+        android:layout_toEndOf="@id/liv_head"/>
+
+    <ImageView android:id="@+id/liv_heart"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/shape_btn_in"
+        android:layout_toEndOf="@id/ltv_name"/>
+
+    <TextView android:id="@+id/ltv_heart_number"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@id/liv_heart"
+        android:background="@color/colorQOXPurple"/>
+
+</RelativeLayout>

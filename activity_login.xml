@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity"
+    android:padding="16dp"
+    android:background="@color/colorJSkyBlue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/login">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp">
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_id"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shape_text"
+                    android:hint="  请输入手机号或邮箱号"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/colorMoPurple"
+                    android:textSize="20sp" />
+                <!--                <Spinner-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:id="@+id/sp_role"-->
+                <!--                    android:layout_gravity="center"/>-->
+
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/et_pwd"
+                    android:textSize="20sp"
+                    android:background="@drawable/shape_text"
+                    android:hint="  请输入密码"
+                    android:textColorHint="@color/colorMoPurple"
+                    android:lines="1"
+                    android:singleLine="true"/>
+            </TableRow>
+        </TableLayout>
+        <!--        <Spinner-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:id="@+id/sp_role"-->
+        <!--            android:layout_gravity="center"/>-->
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_login"
+            android:text="@string/btn_login"
+            style="@style/lo_re"
+            android:drawableEnd="@mipmap/ic_right"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_repwd"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="忘记密码"
+                android:textColor="@color/colorGhostWhite"
+                android:textSize="18sp"/>
+            <View
+                android:id="@+id/vv"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/colorMilkWhite"
+                android:layout_toEndOf="@id/tv_repwd"/>
+            <TextView
+                android:id="@+id/tv_regi"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="用户注册"
+                android:textSize="18sp"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/colorGhostWhite"
+                android:layout_toEndOf="@id/vv"/>
+
+        </RelativeLayout>
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:gravity="center">-->
+        <!--            <ImageView-->
+        <!--                android:id="@+id/iv_qq"-->
+        <!--                android:layout_width="60dp"-->
+        <!--                android:layout_height="60dp"-->
+        <!--                android:layout_marginEnd="50dp"-->
+        <!--                android:src="@drawable/left"-->
+        <!--                android:background="@color/colorMilkWhite"/>-->
+        <!--            <TextView-->
+        <!--                android:id="@+id/tv_qq"-->
+        <!--                android:layout_width="60dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginEnd="50dp"-->
+        <!--                android:layout_below="@+id/iv_qq"-->
+        <!--                android:background="@color/colorSilverWhitte"-->
+        <!--                android:text="QQ登录"-->
+        <!--                android:gravity="center"/>-->
+        <!--            <ImageView-->
+        <!--                android:id="@+id/vx"-->
+        <!--                android:layout_width="60dp"-->
+        <!--                android:layout_height="60dp"-->
+        <!--                android:src="@drawable/left"-->
+        <!--                android:layout_toEndOf="@id/iv_qq"-->
+        <!--                android:background="@color/colorMilkWhite"/>-->
+        <!--            <TextView-->
+        <!--                android:layout_width="60dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_below="@+id/vx"-->
+        <!--                android:layout_toEndOf="@id/tv_qq"-->
+        <!--                android:background="@color/colorSilverWhitte"-->
+        <!--                android:text="微信登录"-->
+        <!--                android:gravity="center"/>-->
+
+        <!--        </RelativeLayout>-->
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:id="@+id/tv_show"/>-->
+    </LinearLayout>
+
+</LinearLayout>
