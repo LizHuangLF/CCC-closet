@@ -158,6 +158,12 @@
         <item name="android:windowEnterAnimation">@anim/bottom_anim_enter</item>
         <item name="android:windowExitAnimation">@anim/bottom_anim_exit</item>
     </style>
+    
+    <!--    动画-->
+    <style name="dir_popupwindow_anim">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
 
 
 </resources>
