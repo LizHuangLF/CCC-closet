@@ -8,11 +8,13 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,29 +22,53 @@ import android.widget.Toast;
 import com.exam.closet_f.R;
 
 public class ItemAddActivity extends AppCompatActivity {
-    Toolbar toolbar;
 //    BarActivity bar;
+//    View barView;
+    private TextView title,over;
     private Spinner spColor;
-    private TextView tvColor;
-    private ImageView ivPic;
+    private ImageView ivPic,ivColor,ivBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_add);
-
-        initData();
+//        添加自定义toolbar
+        LinearLayout toolbarm=findViewById(R.id.toolbarm);
+        View barView = LayoutInflater.from(this).inflate(R.layout.toolbar_m,toolbarm);
+//        LayoutInflater.from(this).inflate(R.layout.toolbar_m,toolbarm,false);取消
+        toolbarm.setBackgroundColor(getResources().getColor(R.color.colorXRenYellow));
+        initData(barView);
 
 
 
     }
 
-    private void initData(){
-        tvColor = findViewById(R.id.tv_color);
+    private void initData(View barView){
+        ivBack = barView.findViewById(R.id.iv_back);
+        title = barView.findViewById(R.id.tv_title);
+        title.setText("添加单品");
+        over = barView.findViewById(R.id.tv_over);
+        over.setText("完成");
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ItemAddActivity.this,CCCActivity.class));
+                finish();
+            }
+        });
+        over.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //验证是否可以进行提交
+                //1 图片是否为空
+//                2其余数据是否错误
+                Toast.makeText(getApplication(),"完成",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ivColor = findViewById(R.id.iv_color);
         spColor = findViewById(R.id.sp_color);showSpcolor();
-        toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-        showToolbar();
+
         ivPic = findViewById(R.id.iv_pic);
         ivPic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,29 +106,33 @@ public class ItemAddActivity extends AppCompatActivity {
         });
     }
 
-    private void showToolbar(){
-        toolbar.setTitle("添加单品");
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ItemAddActivity.this,CCCActivity.class));
-                finish();
-            }
-        });
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.m_wan:
-                        Toast.makeText(ItemAddActivity.this, "完成添加", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.m_clear:
-                        Toast.makeText(ItemAddActivity.this, "清除", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                return true;
-            }
-        });
-    }
+//    private void showToolbar(){
+
+
+//        toolbar.setTitle("添加单品");
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(ItemAddActivity.this,CCCActivity.class));
+//                finish();
+//            }
+//        });
+//        toolbar.setBackgroundResource(R.color.colorXinYellow);
+//        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                switch (item.getItemId()){
+//                    case R.id.m_wan:
+//                        Toast.makeText(ItemAddActivity.this, "完成添加", Toast.LENGTH_SHORT).show();
+//                        break;
+//                    case R.id.m_clear:
+//                        Toast.makeText(ItemAddActivity.this, "清除", Toast.LENGTH_SHORT).show();
+//                        break;
+//                }
+//                return true;
+//            }
+//        });
+//    }
 
 }
+
