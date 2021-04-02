@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.exam.closet_f.R;
 import com.exam.closet_f.activity.ItemAddActivity;
+import com.exam.closet_f.activity.ItemAlbumActivity;
 import com.exam.closet_f.activity.ItemShowActivity;
 import com.exam.closet_f.util.FragCallBack;
 
@@ -34,6 +35,7 @@ public class inFragment extends Fragment {
     private LinearLayout ltAll;
     static inFragment iff;
     private TextView tv;
+    int itemID;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -168,15 +170,28 @@ public class inFragment extends Fragment {
         ltAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ItemShowActivity.class));
-//                Objects.requireNonNull(getActivity()).finish();
+                startActivity(new Intent(getActivity(), ItemAlbumActivity.class));
+                Objects.requireNonNull(getActivity()).finish();
             }
         });
 
+
+        switch (v.getId()){
+            case R.id.tv_upper:     itemID = 0;
+            case R.id.tv_bottom:    itemID = 1;
+            case R.id.tv_footgear:  itemID = 2;
+            case R.id.tv_bagcap:    itemID = 3;
+            case R.id.tv_suit:      itemID = 4;
+            case R.id.tv_other:     itemID = 5;
+        }
+        goItemActivity(itemID);
     }
 
-    public void btnAdd(View v){
-
-
+    private void goItemActivity(int ID){
+        Intent intent = new Intent();
+        intent.putExtra("itemID",ID);
+        startActivity(intent);
     }
+
+
 }
