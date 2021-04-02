@@ -90,12 +90,12 @@ public class LoginActivity extends AppCompatActivity {
             } else if ("id||pwd WRONG".equals(response)) {
                 Toast.makeText(LoginActivity.this, "登录失败，账号或密码错误", Toast.LENGTH_SHORT).show();
 //            } else if ("LoginSUCC".equals(response)) {
-            }else{//登录成功传来的是用户昵称
+            }else{//
                 Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
-                Bundle bundle = new Bundle();
-                bundle.putString("uname",response);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("uname",response);
                 Intent intent = new Intent();
-                intent.putExtras(bundle);
+//                intent.putExtras(bundle);
 //                intent.putExtra("username",response);//传值
                 intent.setClass(LoginActivity.this, CCCActivity.class);
                 startActivity(intent);
