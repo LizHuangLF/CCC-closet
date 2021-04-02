@@ -72,7 +72,7 @@
 
     <style name="tbsp">
         <item name="android:layout_width">100dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
         <item name="android:layout_marginStart">5dp</item>
         <item name="android:textColor">@color/colorGrey</item>
         <item name="android:background">@drawable/shape_text</item>
@@ -81,7 +81,7 @@
     </style>
     <style name="tbsp_colo">
         <item name="android:layout_width">100dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
         <item name="android:layout_marginStart">5dp</item>
         <item name="android:background">@drawable/shape_text</item>
         <item name="android:textColor">@color/colorGrey</item>
@@ -122,12 +122,24 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">2dp</item>
         <item name="android:background">@color/colorGhostWhite</item>
-        <!--        <item name="android:layout_marginTop">15dp</item>-->
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item></style>
+    <style name="Viewv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/colorJSkyBlue</item>
         <item name="android:layout_marginLeft">15dp</item>
         <item name="android:layout_marginRight">15dp</item></style>
 
 
     <!--    个人资料-->
+    <style name="item_tv">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
     <style name="Tablerow">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -158,8 +170,9 @@
         <item name="android:windowEnterAnimation">@anim/bottom_anim_enter</item>
         <item name="android:windowExitAnimation">@anim/bottom_anim_exit</item>
     </style>
-    
-    <!--    动画-->
+
+
+<!--    动画-->
     <style name="dir_popupwindow_anim">
         <item name="android:windowEnterAnimation">@anim/slide_up</item>
         <item name="android:windowExitAnimation">@anim/slide_down</item>
