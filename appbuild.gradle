@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+// 添加插件
+apply plugin: 'com.mob.sdk'
+
+
+
+android {
+    signingConfigs {
+        lizcloset {
+            storeFile file('D:\\lizcloset.jks')
+            storePassword 'lizpwd'
+            keyAlias = 'key0'
+            keyPassword 'lizpwd'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.exam.closet_f"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false;
+        checkReleaseBuilds false;
+    }
+
+    // 在MobSDK的扩展中注册SMSSDK的相关信息
+    MobSDK {
+        appKey "32b72a828b44c"
+        appSecret "f164755bc0fe99eef86975a6f060074a"
+        SMSSDK {
+            gui false
+        }
+        fp true //严格模式
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation files('libs/okhttp-3.2.0.jar')
+}
