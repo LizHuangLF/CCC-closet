@@ -4,6 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.ItemShowActivity">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/colorSilverWhitte"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_shirt"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="衬衫"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_shirt_num"
+                android:layout_toEndOf="@id/tv_shirt"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="4"
+                android:textSize="18sp"
+                android:drawableEnd="@mipmap/d_right"
+                android:gravity="center"/>
+            <ImageView style="@style/iv_rl"
+                android:layout_toEndOf="@id/tv_shirt_num"/>
+            <GridView
+                android:id="@+id/grid_shirt"
+                android:background="@color/colorMilkWhite"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tv_shirt"
+                android:cacheColorHint="@android:color/transparent"
+                android:horizontalSpacing="3dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="3dp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            style="@style/rl_itemshow">
+            <TextView style="@style/tv_rl"
+                android:id="@+id/tv_short"
+                android:text="短袖"/>
+            <TextView style="@style/tvnum_rl"
+                android:id="@+id/tv_short_num"
+                android:layout_toEndOf="@id/tv_short"
+                android:text="4"/>
+            <GridView
+                android:id="@+id/grid_short"
+                style="@style/gridv_rl"
+                android:layout_below="@+id/tv_short"/>
+            <ImageView style="@style/iv_rl"
+                android:id="@+id/iv_add_short"
+                android:layout_toEndOf="@id/tv_short_num"/>
+        </RelativeLayout>
+        <RelativeLayout
+            style="@style/rl_itemshow">
+            <TextView style="@style/tv_rl"
+                android:id="@+id/tv_caftan"
+                android:text="长袖"/>
+            <TextView style="@style/tvnum_rl"
+                android:id="@+id/tv_caftan_num"
+                android:layout_toEndOf="@id/tv_caftan"
+                android:text="3"/>
+            <GridView
+                android:id="@+id/grid_caftan"
+                style="@style/gridv_rl"
+                android:layout_below="@+id/tv_caftan"/>
+            <ImageView style="@style/iv_rl"
+                android:id="@+id/iv_add_caftan"
+                android:layout_toEndOf="@id/tv_caftan_num"/>
+        </RelativeLayout>
+        <RelativeLayout
+            style="@style/rl_itemshow">
+            <TextView style="@style/tv_rl"
+                android:id="@+id/tv_coat"
+                android:text="外套"/>
+            <TextView style="@style/tvnum_rl"
+                android:id="@+id/tv_coat_num"
+                android:layout_toEndOf="@id/tv_coat"
+                android:text="4"/>
+            <GridView
+                android:id="@+id/grid_coat"
+                style="@style/gridv_rl"
+                android:layout_below="@+id/tv_coat"/>
+            <ImageView style="@style/iv_rl"
+                android:id="@+id/iv_add_coat"
+                android:layout_toEndOf="@id/tv_coat_num"/>
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
