@@ -63,6 +63,7 @@ public class ItemAddActivity extends AppCompatActivity {
                 //1 图片是否为空
 //                2其余数据是否错误
                 Toast.makeText(getApplication(),"完成",Toast.LENGTH_SHORT).show();
+//                返回该衣服类别的全部图
             }
         });
 
@@ -135,4 +136,5 @@ public class ItemAddActivity extends AppCompatActivity {
 //    }
 
 }
+
 
