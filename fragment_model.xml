@@ -13,7 +13,7 @@
         android:gravity="center">
         <TextView
             android:layout_width="200dp"
-            android:id="@+id/tv_model"
+            android:id="@+id/tv_ins"
             android:text="灵感"
             android:gravity="center"
             android:textSize="18sp"
@@ -29,15 +29,10 @@
             android:textColor="@drawable/selector_rbt"/>
     </TableRow>
 
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-        <GridView android:id="@+id/grid"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="45dp"
-            android:gravity="center"
-            android:columnWidth="180dp"
-            android:numColumns="2"
-            android:verticalSpacing="5dp">
-        </GridView>
 
 </FrameLayout>
