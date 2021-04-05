@@ -6,16 +6,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.exam.closet_f.R;
+import com.exam.closet_f.adapter.albumAdapter;
+import com.exam.closet_f.bean.ItemPic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ItemAlbumActivity extends AppCompatActivity {
     private ImageView ivBack;
     private TextView title,choosePic;
+    GridView grid;
+    private int[] itempics= new int[]{R.drawable.up_vest,R.drawable.up_coat_black,R.drawable.up_coat_brown,
+            R.drawable.up_coat_cow,R.drawable.up_shirt_wen,R.drawable.up_shirt_white,R.drawable.up_shirt_white_f,
+            R.drawable.bo_cq_white,R.drawable.up_shirt_black,R.drawable.up_shirt_black_v,R.drawable.up_shirt_brown,
+            R.drawable.up_short_black,R.drawable.up_short_blue,R.drawable.up_short_yellow,R.drawable.up_shirt_xin_o,
+            R.drawable.up_short_ge,R.drawable.up_swear_ge,R.drawable.up_coat_ge,R.drawable.up_shirt_wen_d};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +64,18 @@ public class ItemAlbumActivity extends AppCompatActivity {
             }
         });
 
+        grid = findViewById(R.id.mGridView);
+        List<ItemPic> picList = new ArrayList<>();
+        for(int i = 0; i < itempics.length;i++){
+            ItemPic itemPic = new ItemPic();
+            itemPic.setPic(itempics[i]);
+            picList.add(itemPic);
+        }
+        albumAdapter adapter = new albumAdapter(this,picList);
+        grid.setAdapter(adapter);
+
+
     }
+
 
 }
