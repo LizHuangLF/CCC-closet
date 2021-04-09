@@ -4,9 +4,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<!--    <string name="url_login">http://192.168.1.86:8080/closet_ser/servlet/LoginSer</string>-->
-        <string name="url_login">http://172.18.212.43:8080/closet_ser/servlet/LoginSer</string>
-<!--    cmd ipconfig           wlan  ipv6-->
+    <!--    <string name="url_login">http://192.168.1.86:8080/closet_ser/servlet/LoginSer</string>-->
+    <string name="url_login">http://172.18.212.43:8080/closet_ser/servlet/LoginSer</string>
+    <!--    cmd ipconfig           wlan  ipv6-->
+    <string name="url_register">http://172.18.212.43:8080/closet_ser/servlet/RegisterSer</string>
+    <string name="url_registercode">http://172.18.212.43:8080/closet_ser/servlet/RegistercodeSer</string>
 
 
     <!--    *****inFragment*****-->
@@ -50,6 +52,7 @@
     <string name="tv_analyse">数据分析</string>
     <string name="tv_shoper">待购清单</string>
     <string name="tv_accountManager">账号管理</string>
+    <string name="tv_closetManager">衣橱管理</string>
 
     <!--    登录-->
     <string name="btn_login">登录</string>
