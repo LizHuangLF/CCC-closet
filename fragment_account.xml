@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AccountFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp">
+
+                    <TableRow android:id="@+id/tr_data"
+                        style="@style/TableRow">
+                        <ImageView
+                            style="@style/TableIcon"
+                            android:src="@mipmap/ic_mine_data" />
+                        <TextView
+                            style="@style/TableText"
+                            android:text="个人信息" />
+                        <ImageView style="@style/TableImage" />
+                    </TableRow>
+                    <View style="@style/View" />
+
+                    <TableRow android:id="@+id/tr_prefer"
+                        style="@style/TableRow">
+                        <ImageView
+                            style="@style/TableIcon"
+                            android:src="@mipmap/ic_mine_perefer" />
+                        <TextView
+                            style="@style/TableText"
+                            android:text="账号安全" />
+                        <ImageView style="@style/TableImage" />
+                    </TableRow>
+                    <View style="@style/View" />
+    </TableLayout>
+
+        <TextView
+            android:id="@+id/tv_idchange"
+            android:layout_marginTop="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:background="@color/colorMilkWhite"
+            android:text="切换账号"
+            android:textSize="28dp"/>
+    <TextView
+        android:id="@+id/tv_idout"
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:background="@color/colorMilkWhite"
+        android:text="退出"
+        android:textSize="28dp"/>
+
+
+    <View style="@style/View" />
+
+</FrameLayout>
