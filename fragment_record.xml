@@ -44,11 +44,52 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <androidx.viewpager.widget.ViewPager
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+                <ImageView
+                    android:id="@+id/iv_outfit"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/ic_noimg"/>
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/tv_way"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:layout_toEndOf="@id/iv_outfit"
+                    android:text="搭配方式："
+                    />
 
-        </androidx.viewpager.widget.ViewPager>
+<!--            <ListView-->
+<!--                android:id="@+id/lv_preoutfit"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="match_parent"/>-->
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/iv_outfit"
+                android:layout_marginBottom="65dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <GridView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:numColumns="auto_fit"
+                        android:columnWidth="80dp"
+                        android:horizontalSpacing="3dp"
+                        android:stretchMode="spacingWidthUniform" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
     </LinearLayout>
 
 
