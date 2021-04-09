@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="5dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -54,7 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:clickable="true">
 
             <LinearLayout style="@style/ltv_style">
                 <TextView
@@ -62,7 +63,7 @@
                     style="@style/tv_style"
                     android:background="@color/colorMilkWhite"
                     android:drawableTop="@drawable/ic_in_upper"
-                    android:text="@string/tv_upper" />
+                    android:text="@string/tv_upper"/>
 
                 <!--                <View-->
                 <!--                    android:layout_width="20dp"-->
@@ -72,39 +73,42 @@
                     android:id="@+id/tv_bottom"
                     style="@style/tv_style"
                     android:background="@color/colorXRenYellow"
-                    android:drawableTop="@drawable/ic_in_bottom"
-                    android:text="@string/tv_bottom" />
+                    android:drawableTop="@drawable/ic_in_bo"
+                    android:text="@string/tv_bottom"/>
             </LinearLayout>
-
-            <LinearLayout style="@style/ltv_style">
-                <TextView
-                    android:id="@+id/tv_footgear"
-                    style="@style/tv_style"
-                    android:background="@color/colorXRenYellow"
-                    android:drawableTop="@drawable/ic_in_footgear"
-                    android:text="@string/tv_footgear" />
-
-                <!--                <View-->
-                <!--                    android:layout_width="20dp"-->
-                <!--                    android:layout_height="175dp" />-->
-
-                <TextView
-                    android:id="@+id/tv_bagcap"
-                    style="@style/tv_style"
-                    android:background="@color/colorMilkWhite"
-                    android:drawableTop="@drawable/ic_in_bagcap"
-                    android:text="@string/tv_bagcap" />
-            </LinearLayout>
-
 
             <LinearLayout style="@style/ltv_style">
                 <TextView
                     android:id="@+id/tv_suit"
                     style="@style/tv_style"
                     android:layout_column="1"
+                    android:background="@color/colorXRenYellow"
+                    android:drawableTop="@drawable/ic_in_suit"
+                    android:text="@string/tv_suit"/>
+
+                <!--                <View-->
+                <!--                    android:layout_width="20dp"-->
+                <!--                    android:layout_height="175dp" />-->
+
+                <TextView
+                    android:id="@+id/tv_footgear"
+                    style="@style/tv_style"
                     android:background="@color/colorMilkWhite"
-                    android:drawableTop="@drawable/ic_inc"
-                    android:text="@string/tv_suit" />
+                    android:drawableTop="@drawable/ic_in_footgear"
+                    android:text="@string/tv_footgear"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/ltv_style">
+                <TextView
+                    android:id="@+id/tv_bagcap"
+                    style="@style/tv_style"
+                    android:background="@color/colorMilkWhite"
+                    android:drawableTop="@drawable/ic_in_bagcap"
+                    android:text="@string/tv_bagcap"/>
+
+
 
                 <!--                <View-->
                 <!--                    android:layout_width="20dp"-->
@@ -115,11 +119,12 @@
                     style="@style/tv_style"
                     android:layout_column="2"
                     android:background="@color/colorXRenYellow"
-                    android:drawableTop="@drawable/ic_minec"
-                    android:text="@string/tv_other" />
+                    android:drawableTop="@drawable/ic_in_other"
+                    android:text="@string/tv_other"/>
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
 
+</FrameLayout>
 </FrameLayout>
