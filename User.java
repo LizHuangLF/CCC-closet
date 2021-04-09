@@ -7,6 +7,16 @@ public class User {
     private String u_tel;
     private String u_name;
 
+    public int getU_head() {
+        return u_head;
+    }
+
+    public void setU_head(int u_head) {
+        this.u_head = u_head;
+    }
+
+    private int u_head;
+
     public String getU_id() {
         return u_id;
     }
