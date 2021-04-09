@@ -67,7 +67,7 @@
             android:id="@+id/btn_login"
             android:text="@string/btn_login"
             style="@style/lo_re"
-            android:drawableEnd="@mipmap/ic_right"/>
+            android:drawableEnd="@mipmap/d_right"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
