@@ -2,39 +2,55 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center">
+    android:layout_height="180dp"
+    android:layout_gravity="center"
+    android:background="@color/colorYuanShanPurple"
+    android:layout_marginBottom="5dp">
 
     <ImageView android:id="@+id/l_iv"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:background="@color/colorQOXPurple"/>
+        android:background="@color/colorLightPurple"/>
 
     <ImageView android:id="@+id/liv_head"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="@drawable/shape_btn_in"
+        android:background="@drawable/ic_noimg"
         android:layout_toEndOf="@id/l_iv"/>
 
     <TextView android:id="@+id/ltv_name"
         android:layout_width="60dp"
         android:layout_height="30dp"
-        android:background="@color/white"
         android:gravity="center"
         android:text="@string/tv_name"
+        android:textColor="@color/colorGhostWhite"
         android:layout_toEndOf="@id/liv_head"/>
 
     <ImageView android:id="@+id/liv_heart"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="5dp"
-        android:background="@drawable/shape_btn_in"
+        android:background="@drawable/icb_modelc"
         android:layout_toEndOf="@id/ltv_name"/>
 
     <TextView android:id="@+id/ltv_heart_number"
         android:layout_width="60dp"
         android:layout_height="30dp"
-        android:layout_toEndOf="@id/liv_heart"
-        android:background="@color/colorQOXPurple"/>
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/liv_heart"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="5dp"
+        android:layout_below="@id/ltv_name"
+        android:layout_toEndOf="@id/l_iv"
+        android:background="@color/colorGhostWhite"/>
+
+    <TextView android:id="@+id/ltv_detail"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ltv_name"
+        android:layout_toEndOf="@id/l_iv"/>
 
 </RelativeLayout>
