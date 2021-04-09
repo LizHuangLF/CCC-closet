@@ -5,13 +5,18 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
+import android.widget.TextView;
 
 import com.exam.closet_f.R;
+import com.exam.closet_f.adapter.fragAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +29,12 @@ import com.exam.closet_f.R;
 
 //头像框 https://blog.csdn.net/weixin_43977664/article/details/113872166?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161650821916780261998768%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161650821916780261998768&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-11-113872166.pc_search_result_cache&utm_term=android+%E5%A4%B4%E5%83%8F%E6%A1%86
 public class modelFragment extends Fragment {
-    GridView gridView;
+    private TextView tvHeart,tvIns;
+    private ViewPager pager;
+    InspiraFragment insFrag;
+    HeartFragment heartFrag;
+    private List<Fragment> list = new ArrayList<Fragment>();
+    private fragAdapter adapter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -117,6 +127,51 @@ public class modelFragment extends Fragment {
     }
 
     private void initData(View v){
-        gridView = v.findViewById(R.id.grid);
+       pager = v.findViewById(R.id.pager);
+       tvHeart = v.findViewById(R.id.tv_heart);
+       tvIns = v.findViewById(R.id.tv_ins);
+
+       tvIns.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+                tvIns.setTextColor(getResources().getColor(R.color.white));
+                pager.setCurrentItem(0,false);
+           }
+       });
+       tvHeart.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               tvHeart.setTextColor(getResources().getColor(R.color.white));
+               pager.setCurrentItem(1,false);
+           }
+       });
+       list.add(new InspiraFragment());
+       list.add(new HeartFragment());
+
+        adapter = new fragAdapter(getChildFragmentManager(), list);
+        pager.setAdapter(adapter);
     }
+
+//    public void onPageSelected(int arg0) {
+//        clear();
+//        switch (arg0) {
+//            case 0:
+//                mBtn1.setTextColor(Color.GREEN);
+//                pager.setCurrentItem(0, false);
+//                break;
+//            case 1:
+//                mBtn2.setTextColor(Color.GREEN);
+//                pager.setCurrentItem(1, false);
+//                break;
+//        }
+//
+//    }
+//
+//    private void clear() {
+//        mBtn1.setTextColor(Color.GRAY);
+//        mBtn2.setTextColor(Color.GRAY);
+//    }
+
+
 }
+
