@@ -78,12 +78,12 @@ public class dialogFrag extends DialogFragment {
 //    @OnClick({R.id.wechartShareLayout, R.id.circleShareLayout, R.id.cancleText})
     void onViewClick(View view){
         switch (view.getId()) {
-            case R.id.wechartShareLayout:
-                Log.e("TAG", "点击了微信分享");
-                break;
-            case R.id.circleShareLayout:
-                Log.e("TAG", "点击了朋友圈分享");
-                break;
+//            case R.id.wechartShareLayout:
+//                Log.e("TAG", "点击了微信分享");
+//                break;
+//            case R.id.circleShareLayout:
+//                Log.e("TAG", "点击了朋友圈分享");
+//                break;
             case R.id.cancleText:
                 dismiss();
                 break;
