@@ -7,8 +7,8 @@
     android:orientation="vertical"
     tools:context=".activity.ItemAddActivity">
 
-    <include android:id="@+id/toolbar"
-        layout="@layout/toolbar"/>
+    <include android:id="@+id/toolbarm"
+        layout="@layout/toolbar_m"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:id="@+id/iv_pic"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:background="@drawable/item_q"/>
+            android:background="@drawable/up_short_yellow"/>
 <!--            android:background="@drawable/shape_pic"-->
         <ScrollView
             android:layout_width="match_parent"
@@ -56,8 +56,8 @@
 <!--                        android:id="@+id/sp_tone"-->
 <!--                        android:entries="@array/colo"-->
 <!--                        android:prompt="@string/sp_colo"/>-->
-                    <TextView
-                        android:id="@+id/tv_color"
+                    <ImageView
+                        android:id="@+id/iv_color"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"/>
@@ -111,12 +111,6 @@
                     android:layout_marginStart="5dp"
                     android:background="@drawable/shape_text"/>
             </TableRow>
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="45dp"
-                    android:background="@color/colorXinYellow"
-                    android:layout_gravity="center"
-                    android:text="完成"/>
                 <EditText
                  android:id="@+id/et_other"
                  android:layout_width="match_parent"
