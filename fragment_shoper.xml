@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ShoperFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout style="@style/sf_ltv_style">
+            <TextView
+                android:id="@+id/tv_upper"
+                style="@style/sf_tv_style"
+                android:background="@drawable/ic_in_upper"/>
+            <TextView
+                android:id="@+id/tv_bottom"
+                style="@style/sf_tv_style"
+                android:background="@drawable/ic_in_bo"/>
+            <TextView
+                android:id="@+id/tv_suit"
+                style="@style/sf_tv_style"
+                android:background="@drawable/ic_in_suit"/>
+            <TextView
+                android:id="@+id/tv_footgear"
+                style="@style/sf_tv_style"
+                android:background="@drawable/ic_in_footgear"/>
+            <TextView
+                android:id="@+id/tv_bagcap"
+                style="@style/sf_tv_style"
+                android:background="@drawable/ic_in_bagcap"/>
+            <TextView
+                android:id="@+id/tv_other"
+                style="@style/sf_tv_style"
+                android:background="@drawable/ic_in_other"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_shoper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</FrameLayout>
