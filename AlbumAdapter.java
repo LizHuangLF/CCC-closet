@@ -18,12 +18,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class albumAdapter extends BaseAdapter {
+public class AlbumAdapter extends BaseAdapter {
     private List<ItemPic> picList;
     private Context context;
     private LayoutInflater inflater;
 
-    public albumAdapter(Context context,List<ItemPic> picList){
+    public AlbumAdapter(Context context, List<ItemPic> picList){
         this.picList = picList;
         this.context = context;
     }
@@ -76,3 +76,4 @@ public class albumAdapter extends BaseAdapter {
     }
 
 }
+
