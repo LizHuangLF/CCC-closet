@@ -16,12 +16,13 @@
     <!--    底栏图标-->
     <style name="radiobutton_style">
         <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:button">@null</item>
-        <item name="android:layout_height">match_parent</item>
 <!--        <item name="android:background">@drawable/color_radiobtnb</item>-->
         <item name="android:textColor">@drawable/selector_rbt</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 <!--infragment-->
@@ -30,6 +31,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
         <!--        <item name="android:background">@color/colorSilverWhitte</item>-->
     </style>
     <style name="tv_style">
@@ -92,6 +94,43 @@
 <!--        <item name="android:background">null</item>-->
     </style>
 
+    <!--    itemShow 单品分类展示-->
+    <style name="rl_itemshow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <style name="tv_rl">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="tvnum_rl">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:drawableEnd">@mipmap/d_right</item>
+    </style>
+    <style name="iv_rl">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:src">@drawable/ic_add</item>
+    </style>
+    <style name="gridv_rl">
+        <item name="android:background">@color/colorMilkWhite</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1000dp</item>
+        <item name="android:horizontalSpacing">3dp</item>
+        <item name="android:numColumns">4</item>
+        <item name="android:stretchMode">columnWidth</item>
+        <item name="android:verticalSpacing">3dp</item>
+    </style>
+
+
 
 
 
@@ -116,7 +155,7 @@
     <style name="TableImage">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:src">@mipmap/ic_right</item></style>
+        <item name="android:src">@mipmap/d_right</item></style>
 
     <style name="View">
         <item name="android:layout_width">match_parent</item>
@@ -156,6 +195,23 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">right</item></style>
 
+<!--代购清单  shoperFrag-->
+    <style name="sf_ltv_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+<!--        <item name="android:background">@color/colorLightBluePurple</item>-->
+    </style>
+    <style name="sf_tv_style">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+
 
     <!--    登录注册-->
     <style name="lo_re">
@@ -180,3 +236,4 @@
 
 
 </resources>
+
