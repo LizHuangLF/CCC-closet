@@ -20,6 +20,8 @@ import com.exam.closet_f.activity.ItemAlbumActivity;
 import com.exam.closet_f.activity.ItemShowActivity;
 import com.exam.closet_f.util.FragCallBack;
 
+import org.w3c.dom.Text;
+
 import java.util.Objects;
 
 /**
@@ -35,6 +37,7 @@ public class inFragment extends Fragment {
     private LinearLayout ltAll;
     static inFragment iff;
     private TextView tv;
+    private TextView tvUpper,tvBottom,tvFootgear,tvBagcap,tvSuit,tvOther;
     int itemID;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -175,22 +178,37 @@ public class inFragment extends Fragment {
             }
         });
 
+        tvUpper = v.findViewById(R.id.tv_upper);
+        tvUpper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemID =0; goItemActivity(itemID);
+            }
+        });
+        tvBottom = v.findViewById(R.id.tv_bottom);
+        tvFootgear = v.findViewById(R.id.tv_footgear);
+        tvBagcap = v.findViewById(R.id.tv_bagcap);
+        tvSuit = v.findViewById(R.id.tv_suit);
+        tvOther = v.findViewById(R.id.tv_other);
 
-        switch (v.getId()){
-            case R.id.tv_upper:     itemID = 0;
-            case R.id.tv_bottom:    itemID = 1;
-            case R.id.tv_footgear:  itemID = 2;
-            case R.id.tv_bagcap:    itemID = 3;
-            case R.id.tv_suit:      itemID = 4;
-            case R.id.tv_other:     itemID = 5;
-        }
-        goItemActivity(itemID);
+
     }
 
-    private void goItemActivity(int ID){
-        Intent intent = new Intent();
+//    public void showItem0( View v){ itemID = 0; goItemActivity(itemID); }
+//    public void showItem1( View v){ itemID = 1; goItemActivity(itemID); }
+//    public void showItem2( View v){ itemID = 2; goItemActivity(itemID); }
+//    public void showItem3( View v){ itemID = 3; goItemActivity(itemID); }
+//    public void showItem4( View v){ itemID = 4; goItemActivity(itemID); }
+//    public void showItem5( View v){ itemID = 5; goItemActivity(itemID); }
+
+
+
+
+    public void goItemActivity(int ID){
+        Intent intent = new Intent(getActivity(),ItemShowActivity.class);
         intent.putExtra("itemID",ID);
         startActivity(intent);
+        Objects.requireNonNull(getActivity()).finish();
     }
 
 
