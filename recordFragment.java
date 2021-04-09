@@ -1,6 +1,7 @@
 package com.exam.closet_f.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,9 +11,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.exam.closet_f.R;
+import com.exam.closet_f.activity.MatchActivity;
+
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +30,7 @@ import com.exam.closet_f.R;
 public class recordFragment extends Fragment {
     private TextView tv;
     private static recordFragment rf;
+    private ImageView ivOutfit;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -39,13 +45,12 @@ public class recordFragment extends Fragment {
     public recordFragment() {
         // Required empty public constructor
     }
-    public static recordFragment getRecordFragment(){
-        if(rf == null){
-            rf = new recordFragment();
-        }
-        return rf;
-
-    }
+//    public static recordFragment getRecordFragment(){
+//        if(rf == null){
+//            rf = new recordFragment();
+//        }
+//        return rf;
+//    }
 
     /**
      * Use this factory method to create a new instance of
@@ -94,6 +99,7 @@ public class recordFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_record, container, false);
+        initData(view);
         tv = view.findViewById(R.id.tv);
         //获取Bundle 然后获取数据
         Bundle bundle =this.getArguments();//得到从Activity传来的数据
@@ -143,5 +149,16 @@ public class recordFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private void initData(View v){
+        ivOutfit = v.findViewById(R.id.iv_outfit);
+        ivOutfit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MatchActivity.class));
+                Objects.requireNonNull(getActivity()).finish();
+            }
+        });
     }
 }
