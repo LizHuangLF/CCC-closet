@@ -9,6 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.exam.closet_f.R;
+import com.exam.closet_f.bean.Heart;
+import com.exam.closet_f.bean.Outfit;
+import com.exam.closet_f.fragment.HeartFragment;
+
+import java.util.List;
 
 public class OutfitAdapter extends BaseAdapter {
     private LayoutInflater mlayout;
@@ -20,6 +25,10 @@ public class OutfitAdapter extends BaseAdapter {
     public OutfitAdapter(Context context){
         this.mcontext = context;
         mlayout = LayoutInflater.from(context);
+    }
+
+    public OutfitAdapter(HeartFragment heartFragment, List<Heart> fitList) {
+
     }
 
     @Override
