@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.exam.closet_f.R;
+import com.exam.closet_f.adapter.fragAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,8 +26,16 @@ import com.exam.closet_f.R;
  * Use the {@link mineFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class mineFragment extends Fragment {
+public class mineFragment extends Fragment{
     private TextView tvName;
+    private TextView tvData,tvShoper,tvAccount,tvCloset;
+    ViewPager pager;
+    private List<Fragment> list = new ArrayList<Fragment>();
+    DataFragment dataFrag;
+    ShoperFragment shoperFrag;
+    AccountFragment accountFrag;
+    ClosetFragment closetFrag;
+    private fragAdapter adapter;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -70,6 +83,7 @@ public class mineFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_mine, container, false);
+        initData(view);
         tvName = view.findViewById(R.id.tv_name);
         Bundle bundle = this.getArguments();//得到从Activity传来的数据
         String uname = null;
@@ -105,6 +119,7 @@ public class mineFragment extends Fragment {
 //        mListener = null;
     }
 
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -119,4 +134,42 @@ public class mineFragment extends Fragment {
         // TODO: Update argument type and name
 //        void onFragmentInteraction(Uri uri);
     }
+
+    private void initData(View v){
+        tvData = v.findViewById(R.id.tv_data); tvData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pager.setCurrentItem(0,false);
+            }
+        });
+        tvShoper = v.findViewById(R.id.tv_shoper);  tvShoper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pager.setCurrentItem(1,false);
+            }
+        });
+        tvAccount = v.findViewById(R.id.tv_account);  tvAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pager.setCurrentItem(2,false);
+            }
+        });
+        tvCloset = v.findViewById(R.id.tv_closet);  tvCloset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pager.setCurrentItem(3,false);
+            }
+        });
+
+        pager = v.findViewById(R.id.pager_mine);
+        list.add(new DataFragment());
+        list.add(new ShoperFragment());
+        list.add(new AccountFragment());
+        list.add(new ClosetFragment());
+
+        adapter = new fragAdapter(getChildFragmentManager(), list);
+        pager.setAdapter(adapter);
+    }
+}
+
 }
