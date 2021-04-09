@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorXRenYellow"
     android:layout_gravity="top"
-    app:navigationIcon="@mipmap/ic_left"
+    app:navigationIcon="@mipmap/d_left"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 </androidx.appcompat.widget.Toolbar>
