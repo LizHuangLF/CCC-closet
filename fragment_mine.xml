@@ -43,12 +43,12 @@
                 android:layout_toEndOf="@id/iv_photo"
                 android:textColor="@color/colorJSkyBlue"/>
 
-            <ImageView style="TableIcon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:id="@+id/iv_message"
-                android:layout_toEndOf="@id/tv_name"
-                android:src="@mipmap/ic_mine_setting"/>
+<!--            <ImageView style="TableIcon"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:id="@+id/iv_message"-->
+<!--                android:layout_toEndOf="@id/tv_name"-->
+<!--                android:src="@mipmap/ic_mine_setting"/>-->
 
             <!--            <TextView-->
             <!--                android:id="@+id/tv_day"-->
@@ -74,28 +74,29 @@
             android:gravity="center_vertical"
             android:background="@drawable/shape_cardd">
             <TextView style="@style/item_tv"
+                android:id="@+id/tv_data"
                 android:drawableTop="@drawable/ic_mine_analyse"
                 android:text="@string/tv_analyse"/>
             <TextView style="@style/item_tv"
+                android:id="@+id/tv_shoper"
                 android:drawableTop="@drawable/ic_mine_shoper"
                 android:text="@string/tv_shoper"/>
             <TextView style="@style/item_tv"
+                android:id="@+id/tv_account"
                 android:drawableTop="@drawable/ic_mine_accman"
                 android:text="@string/tv_accountManager"/>
             <TextView style="@style/item_tv"
+                android:id="@+id/tv_closet"
                 android:drawableTop="@drawable/ic_mine_data"
                 android:text="@string/tv_closetManager"/>
         </LinearLayout>
 
-        <LinearLayout
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager_mine"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorJSkyBlue"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="match_parent"/>
 
 
-        </LinearLayout>
 
         <!--        <LinearLayout-->
 <!--            android:layout_width="match_parent"-->
